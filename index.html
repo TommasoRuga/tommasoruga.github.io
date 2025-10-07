@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tommaso Ruga’s Personal Website</title>
+  <meta name="description" content="Tommaso Ruga’s Personal Website" />
+  <style>
+    :root{--bg:#f7f9fb;--card:#ffffff;--accent:#2b6cb0;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#0f172a}
+    header{background:linear-gradient(90deg, rgba(43,108,176,0.12), rgba(43,108,176,0.04)); padding:18px 20px; border-bottom:1px solid rgba(15,23,42,0.04)}
+    .container{max-width:900px; margin:28px auto; padding:0 18px}
+    nav{display:flex; gap:12px; align-items:center}
+    .brand{font-weight:600; color:var(--accent)}
+    .navlinks{margin-left:auto; display:flex; gap:8px}
+    .navlinks a{padding:8px 12px; text-decoration:none; color:var(--accent); border-radius:8px}
+    .navlinks a.active{background:var(--accent); color:white}
+
+    main section{display:none}
+    main section.active{display:block}
+
+    .card{background:var(--card); padding:18px; border-radius:12px; box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+
+    /* Home layout */
+    .hero{display:grid; grid-template-columns:200px 1fr; gap:18px; align-items:center}
+    .avatar{width:200px; height:200px; border-radius:12px; object-fit:cover; background:#e6eefc}
+    h1{margin:0 0 6px 0; font-size:20px}
+    p.lead{margin:4px 0 12px 0; color:var(--muted)}
+
+    /* Publications */
+    .pub-list{display:grid; gap:12px}
+    .pub{padding:12px; border-radius:8px; border:1px solid rgba(15,23,42,0.04)}
+    .pub h3{margin:0 0 6px 0}
+    .meta{color:var(--muted); font-size:13px}
+
+    /* Courses */
+    .course{display:flex; justify-content:space-between; gap:12px; padding:12px; border-radius:8px; border:1px solid rgba(15,23,42,0.04)}
+    .course .left{max-width:75%}
+
+    footer{margin:40px 0 80px 0; text-align:center; color:var(--muted); font-size:14px}
+
+    /* responsive */
+    @media (max-width:640px){
+      .hero{grid-template-columns:96px 1fr}
+      .navlinks{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;gap:12px">
+      <div class="brand"><h1 style="white-space: nowrap; margin:0;">Tommaso Ruga</h1></div>
+      <nav aria-label="Main Menu" style="width:100%">
+        <div class="navlinks" id="navlinks">
+          <a href="#home" data-target="home" class="active">Home</a>
+          <a href="#publications" data-target="publications">Publications</a>
+          <a href="#courses" data-target="courses">Courses</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HOME -->
+    <section id="home" class="active">
+      <div class="card">
+        <div class="hero">
+          <img class="avatar" src="src/profile.jpg" alt="Tommaso Ruga's Photo">
+          <div>
+            <h1>Tommaso Ruga</h1>
+            <p class="lead"><strong>Phd Student</strong> @ DIMES Department, University of Calabria</p>
+            <p style="text-align: justify"><a> Tommaso Ruga is a Ph.D. Student in Information and Communication Technologies at the Department of Computer Engineering, Modeling, Electronics, and Systems Engineering (DIMES) of the University of Calabria, Italy. He graduated in Computer Engineering in 2023 with a thesis on skin lesion images classification. The main topic of its current research is to provide AI solutions for public administration, which also includes various public domains such as healthcare, agricolture and cultural heritage. Its research is focused not only on providing effective solutions, but also on ensuring that these solutions are explainable - both from the perspective of domain experts and technical specialists. Furthermore, it is committed to studying the fairness and ethical implications of the proposed solutions, with particular attention to the biases present in the datasets currently used to train models.</a></p>
+            <p style="margin-top:12px"><a href="#publications" data-target="publications">See my publications</a> · <a href="#corsi" data-target="corsi">My courses</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBBLICAZIONI -->
+    <section id="publications">
+      <div class="card">
+        <h2>Publications</h2>
+        <p class="meta"></p>
+        <div class="pub-list" style="margin-top:12px">
+          <!-- Esempi: copia e incolla il blocco sottostante per ogni pubblicazione -->
+          
+          <article class="pub">
+            <h3>MultiExCam: A multi approach and explainable artificial intelligence architecture for skin lesion classification</h3>
+            <div class="meta">Ruga, Tommaso; Caroprese, Luciano; Vocaturo, Eugenio; Zumpano, Ester — Computer Methods and Programs in Biomedicine — 2025 — Elsevier — pp. 109081</div>
+          </article>
+
+          <article class="pub">
+            <h3>Underrepresentation of Dark Skin Tone</h3>
+            <div class="meta">Ruga, Tommaso; Zumpano, Ester; Vocaturo, Eugenio — New Trends in Database and Information Systems: ADBIS 2025 Short Papers, Workshops, Doctoral Consortium and Tutorials, Tampere, Finland, September 23–26, 2025, Proceedings — 2025 — Springer Nature — pp. 446</div>
+          </article>
+
+          <article class="pub">
+            <h3>Underrepresentation of Dark Skin Tone in Skin Lesion Datasets: The Role of the Explainable Techniques in Assessing the Bias</h3>
+            <div class="meta">Ruga, Tommaso; Zumpano, Ester; Vocaturo, Eugenio; Caroprese, Luciano — European Conference on Advances in Databases and Information Systems — 2025 — Springer Nature Switzerland Cham — pp. 446-456</div>
+          </article>
+
+          <article class="pub">
+            <h3>Reconstructing Agricultural Environments: Smart Farm Development Through Metrology, AI and Remote Sensing</h3>
+            <div class="meta">Gagliardi, Marco; Lamonaca, Francesco; Maurmo, Danilo; Ruga, Tommaso; Vocaturo, Eugenio; Zumpano, Ester — 2025 IEEE International Workshop on Metrology for Living Environment (MetroLivEnv) — 2025 — IEEE — pp. 271-276</div>
+          </article>
+
+          <article class="pub">
+            <h3>Bias in Dermatological Datasets: A Critical Analysis of the Underrepresentation of Dark Skin Tones in Melanoma Classification Images</h3>
+            <div class="meta">Ruga, Tommaso; Zumpano, Ester; Vocaturo, Eugenio; Caroprese, Luciano; Arlia, Caterina — International Conference on Computational Science — 2025 — Springer Nature Switzerland Cham — pp. 434-448</div>
+          </article>
+
+          <article class="pub">
+            <h3>BrAInVision: A hybrid explainable Artificial Intelligence framework for brain MRI analysis</h3>
+            <div class="meta">Gagliardi, Marco; Maurmo, Danilo; Ruga, Tommaso; Vocaturo, Eugenio; Zumpano, Ester — Image and Vision Computing — 2025 — Elsevier — pp. 105629</div>
+          </article>
+
+          <article class="pub">
+            <h3>Comparing Deep Learning Approaches for Weather Forecasting: Insights from the PRECEDE Project</h3>
+            <div class="meta">Aracne, Maira; Ruga, Tommaso; Lops, Camilla; Federico, Deborah; Caroprese, Luciano; Zumpano, Ester; Montelpare, Sergio; Pierantozzi, Mariano; Dattola, Francesco; Iaquinta, Pasquale — 2025 — 2025 — — pp. </div>
+          </article>
+
+          <article class="pub">
+            <h3>Boosting Agricultural Diagnostics: Cassava Disease Detection with Transfer Learning and Explainable AI</h3>
+            <div class="meta">Maurmo, Danilo; Gagliardi, Marco; Ruga, Tommaso; Zumpano, Ester; Vocaturo, Eugenio — 2024 IEEE International Conference on Big Data (BigData) — 2024 — IEEE — pp. 4702-4710</div>
+          </article>
+
+          <article class="pub">
+            <h3>PRECEDE: Climate and Energy Forecasts to Support Energy Communities with Deep Learning Models</h3>
+            <div class="meta">Dattola, Francesco; Iaquinta, Pasquale; Iusi, Miriam; Federico, Deborah; Greco, Raffaele; Talerico, Marco; Coscarella, Valentina; Legato, Luca; Pellegrino, Ivana; Bergamaschi, Sonia — 2024 IEEE International Conference on Big Data (BigData) — 2024 — IEEE — pp. 4650-4658</div>
+          </article>
+
+          <article class="pub">
+            <h3>AI Image-based Systems for Enhancing the Cultural Tourism Experience</h3>
+            <div class="meta">Folino, Fiorella; Foresta, Maria Francesca; Maurmo, Danilo; Ruga, Tommaso; Zumpano, Ester; Vocaturo, Eugenio — 2024 IEEE International Conference on Big Data (BigData) — 2024 — IEEE — pp. 4720-4726</div>
+          </article>
+
+          <article class="pub">
+            <h3>On the Role of LLM to Forecast the Next Pandemic</h3>
+            <div class="meta">Ruga, Tommaso; Vocaturo, Eugenio; Zumpano, Ester — 2024 IEEE International Conference on Bioinformatics and Biomedicine (BIBM) — 2024 — IEEE — pp. 6567-6573</div>
+          </article>
+
+          <article class="pub">
+            <h3>Explainable Deep Learning for Chest X-Ray Classification</h3>
+            <div class="meta">Ruga, Tommaso; Vocaturo, Eugenio; Zumpano, Ester — 2024 IEEE International Conference on Bioinformatics and Biomedicine (BIBM) — 2024 — IEEE — pp. 6561-6566</div>
+          </article>
+
+          <article class="pub">
+            <h3>Predictive analysis for early detection of breast cancer through artificial intelligence algorithms</h3>
+            <div class="meta">Gagliardi, Marco; Ruga, Tommaso; Vocaturo, Eugenio; Zumpano, Ester — International Conference on Innovations in Computational Intelligence and Computer Vision — 2024 — Springer Nature Singapore Singapore — pp. 53-70</div>
+          </article>
+
+          <article class="pub">
+            <h3>Unveiling The Role of Large Language Models in Healthcare</h3>
+            <div class="meta">Ruga, Tommaso — International Conference on Innovations in Computational Intelligence and Computer Vision — 2024 — Springer Nature Singapore Singapore — pp. 13-24</div>
+          </article>
+
+          <article class="pub">
+            <h3>Classifying chest X-ray images with deep learning techniques: Challenges and explainable analysis</h3>
+            <div class="meta">Ruga, Tommaso — European Conference on Advances in Databases and Information Systems — 2024 — Springer Nature Switzerland Cham — pp. 343-350</div>
+          </article>
+
+          <article class="pub">
+            <h3>Feasibility Analysis of an AI-Based Classification System for Cultural Heritage Building</h3>
+            <div class="meta">Ruga, Tommaso; Caroprese, Luciano; Vocaturo, Eugenio; Zumpano, Ester — 2024 IEEE International Workshop on Metrology for Living Environment (MetroLivEnv) — 2024 — IEEE — pp. 87-91</div>
+          </article>
+
+          <article class="pub">
+            <h3>Visualizing Tourism's Future: The Impact of Image-Based AI on Destination Development</h3>
+            <div class="meta">Folino, Fiorella; Ruga, Tommaso; Zumpano, Ester; Vocaturo, Eugenio — 2024 IEEE International Workshop on Metrology for Living Environment (MetroLivEnv) — 2024 — IEEE — pp. 81-86</div>
+          </article>
+
+          <article class="pub">
+            <h3>Revolutionizing Structural Health Monitoring and Preserving Cultural Heritage via Digital Twins</h3>
+            <div class="meta">Maurmo, Danilo; Ruga, Tommaso; Zumpano, Ester; Vocaturo, Eugenio — 2024 IEEE International Workshop on Metrology for Living Environment (MetroLivEnv) — 2024 — IEEE — pp. 92-97</div>
+          </article>
+
+          <article class="pub">
+            <h3>An ensemble architecture for melanoma classification</h3>
+            <div class="meta">Ruga, Tommaso; Musacchio, Gaia; Maurmo, Danilo — pHealth 2024 — 2024 — IOS Press — pp. 183-184</div>
+          </article>
+
+          <article class="pub">
+            <h3>Predictive analysis for Alzheimer's diagnosis through data mining techniques</h3>
+            <div class="meta">Coscarella, Stefano; Ruga, Tommaso; Zumpano, Ester; Vocaturo, Eugenio — SPAST Reports — 2024 — — pp. 1-4</div>
+          </article>
+
+          <article class="pub">
+            <h3>Diagnosing Brain Tumors: An Artificial Intelligence Modeling Approach</h3>
+            <div class="meta">Maurmo, Danilo; Ruga, Tommaso; Zumpano, Ester; Vocaturo, Eugenio — SPAST Reports — 2024 — — pp. 1-4</div>
+          </article>
+
+          <article class="pub">
+            <h3>Breast cancer classification via deep learning approaches</h3>
+            <div class="meta">Gagliardi, Marco; Ruga, Tommaso; Zumpano, Ester; Vocaturo, Eugenio — SPAST Reports — 2024 — — pp. 1-4</div>
+          </article>
+
+          <article class="pub">
+            <h3>Lung cancer detection via federated learning</h3>
+            <div class="meta">Caroprese, Luciano; Ruga, Tommaso; Vocaturo, Eugenio; Zumpano, Ester — 2023 IEEE International Conference on Bioinformatics and Biomedicine (BIBM) — 2023 — IEEE — pp. 3862-3867</div>
+          </article>
+
+          <article class="pub">
+            <h3>Federated learning applications for breast cancer</h3>
+            <div class="meta">Caroprese, Luciano; Ruga, Tommaso; Vocaturo, Eugenio; Zumpano, Ester — 2023 IEEE international conference on bioinformatics and biomedicine (BIBM) — 2023 — IEEE — pp. 4029-4034</div>
+          </article>
+
+          <article class="pub">
+            <h3>Revealing brain tumor with federated learning</h3>
+            <div class="meta">Caroprese, Luciano; Ruga, Tommaso; Vocaturo, Eugenio; Zumpano, Ester — 2023 IEEE International Conference on Bioinformatics and Biomedicine (BIBM) — 2023 — IEEE — pp. 3868-3873</div>
+          </article>
+
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CORSI -->
+    <section id="courses">
+      <div class="card">
+        <h2>Academic Courses</h2>
+        <p class="meta"></p>
+
+        <div style="margin-top:12px; display:grid; gap:10px">
+          <div class="course">
+            <div class="left">
+              <strong>Corso: Data Analytics for Business</strong>
+              <div class="meta">DIMEG Department, University of Calabria</div>
+              <p>Docente principale: Ester Zumpano. Ruolo: Assistant.</p>
+            </div>
+            <div style="text-align:right; min-width:120px">Ore: —<br>CFU: —</div>
+          </div>
+
+          <div class="course">
+            <div class="left">
+              <strong>Corso: Fondamenti di Informatica</strong>
+              <div class="meta">DIMEG Department, University of Calabria</div>
+              <p>Docente principale: Ester Zumpano. Ruolo: Assistant.</p>
+            </div>
+            <div style="text-align:right; min-width:120px">Ore: —<br>CFU: —</div>
+          </div>
+
+          <div class="course">
+            <div class="left">
+              <strong>Corso: Sistemi Informativi e Basi di Dati</strong>
+              <div class="meta">DIMEG Department, University of Calabria</div>
+              <p>Docente principale: Ester Zumpano. Ruolo: Assistant.</p>
+            </div>
+            <div style="text-align:right; min-width:120px">Ore: —<br>CFU: —</div>
+          </div>
+
+          <div class="course">
+            <div class="left">
+              <strong>Corso: Fondamenti di Informatica</strong>
+              <div class="meta">Dipartimento DIMEG , Università della Calabria</div>
+              <p>Docente principale: Ester Zumpano. Ruolo: Tutor.</p>
+            </div>
+            <div style="text-align:right; min-width:120px">Ore: —<br>CFU: —</div>
+          </div>
+
+          <div class="course">
+            <div class="left">
+              <strong>Corso: Sistemi Informativi e Basi di Dati</strong>
+              <div class="meta">Dipartimento DIMEG , Università della Calabria</div>
+              <p>Docente principale: Ester Zumpano. Ruolo: Tutor.</p>
+            </div>
+            <div style="text-align:right; min-width:120px">Ore: —<br>CFU: —</div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Tommaso Ruga — <a href="mailto:tommaso.ruga@dimes.unical.it">tommaso.ruga@dimes.unical.it</a>
+    </footer>
+  </main>
+
+  <script>
+    // Hash-based navigation semplice
+    const sections = document.querySelectorAll('main section');
+    const navlinks = document.querySelectorAll('.navlinks a');
+    function showSection(id){
+      sections.forEach(s => s.id === id ? s.classList.add('active') : s.classList.remove('active'));
+      navlinks.forEach(a => a.dataset.target === id ? a.classList.add('active') : a.classList.remove('active'));
+    }
+    // On load: read hash
+    function handleHash(){
+      const hash = location.hash.replace('#','') || 'home';
+      showSection(hash);
+    }
+    window.addEventListener('hashchange', handleHash);
+    document.addEventListener('DOMContentLoaded', ()=>{
+      // link clicks that also update active state without reloading
+      document.querySelectorAll('[data-target]').forEach(a=>{
+        a.addEventListener('click', e=>{
+          const t = a.dataset.target;
+          location.hash = t;
+        })
+      })
+      handleHash();
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+  </script>
+
+  <!-- NOTE:
+    - Sostituisci "placeholder-avatar.png" con il file della tua foto (stessa cartella o percorso pubblico).
+    - Sostituisci i campi "Nome Cognome", "Dove lavoro" e la bio con i tuoi dati reali.
+  -->
+</body>
+</html>
