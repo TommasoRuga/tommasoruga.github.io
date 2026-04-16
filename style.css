@@ -62,6 +62,12 @@ p + p {
 
 }
 
+.bio {
+  margin: 0 auto 1.5em auto; /* bottom margin for paragraphs */
+  text-align: justify;
+  hyphens: auto;
+}
+
 /**
  * Quotes & Blockquotes
  */
